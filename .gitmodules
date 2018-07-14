@@ -1,0 +1,3 @@
+[submodule "themes/material"]
+	path = themes/material
+	url = git@github.com:lunaceee/hexo-theme-material.git
