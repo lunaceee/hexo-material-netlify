@@ -8,7 +8,10 @@ subtitle:
 description:
 keywords:
 author: John Doe
-language:
+language: 
+  - en
+  - zh-TW
+
 timezone:
 
 # URL
@@ -79,3 +82,7 @@ theme: material
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+# Include redirects file
+include:
+  - _redirects
