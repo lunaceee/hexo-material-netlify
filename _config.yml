@@ -10,7 +10,7 @@ keywords:
 author: John Doe
 language: 
   - en
-  - zh-TW
+  - es
 
 timezone:
 
@@ -84,5 +84,5 @@ deploy:
   type:
 
 # Include redirects file
-include:
-  - _redirects
+# include:
+#   - _redirects
