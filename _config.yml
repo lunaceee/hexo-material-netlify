@@ -8,11 +8,6 @@ subtitle:
 description:
 keywords:
 author: John Doe
-language: 
-  - en
-  - es
-  - zh-CN
-
 timezone:
 
 # URL
@@ -85,5 +80,5 @@ deploy:
   type:
 
 # Include redirects file
-# include:
-#   - _redirects
+include:
+  - _redirects
