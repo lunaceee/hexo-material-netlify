@@ -11,18 +11,18 @@ This is an example site built with [Hexo](https://hexo.io/) and [Netlify CMS](ht
 
 Use the following deploy button to get your own copy of the repository up and running:
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/lunaceee/hexo-material-netlify/)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/lunaceee/hexo-material-netlify)
 
 ## Local Development
 ```
 $ git clone --recursive https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
 $ cd [REPO_NAME]
 $ npm install
-$ hexo server or hexo s # Start local server
+$ hexo server
 ```
 
-_Notice that the `--recursive` flag is important as the `material` theme under the `theme` folder is introduced as a submodule.
-Learn more from [How to "git clone" including submodules?](https://stackoverflow.com/questions/3796927/how-to-git-clone-including-submodules)._
+_Notice that the `--recursive` flag is NECESSARY here, as the `material` theme under `theme` folder is introduced as a submodule.
+Learn more [How to "git clone" including submodules?](https://stackoverflow.com/questions/3796927/how-to-git-clone-including-submodules)._
 
 ## Netlify CMS editor workflow
 The Netlify CMS `admin` panel is already set up in the repo. You can access it via `yourwebsite.com/admin`, e.g. `localhost:4000/admin`
