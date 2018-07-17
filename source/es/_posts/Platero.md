@@ -6,7 +6,7 @@ tags:
 ---
 
 PLATERO
-![platero](platero.svg)
+![platero](platero.jpg)
 
 PLATERO es pequeño, peludo, suave; tan blando por fuera, que se diría todo de algodón, que no lleva huesos. Sólo los espejos de azabache de sus ojos son duros cual dos escarabajos de cristal negro.
 
