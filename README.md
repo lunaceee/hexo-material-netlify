@@ -22,7 +22,7 @@ $ hexo server or hexo s # Start local server
 ```
 
 _Notice that the `--recursive` flag is important as the `material` theme under the `theme` folder is introduced as a submodule.
-Learn more from [How to "git clone" including submodules?](https://stackoverflow.com/questions/3796927/how-to-git-clone-including-submodules).
+Learn more from [How to "git clone" including submodules?](https://stackoverflow.com/questions/3796927/how-to-git-clone-including-submodules)._
 
 ## Netlify CMS editor workflow
 The Netlify CMS `admin` panel is already set up in the repo. You can access it via `yourwebsite.com/admin`, e.g. `localhost:4000/admin`
