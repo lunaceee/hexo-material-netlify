@@ -7,6 +7,7 @@ This is an example site built with [Hexo](https://hexo.io/) and [Netlify CMS](ht
 
 ## Deploy to Netlify
 Use the following deploy button to get your own copy of the repository up and running:
+
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/lunaceee/hexo-material-netlify&stack=cms)
 
 The Deploy to Netlify button clones a copy of this repository to your own GitHub or GitLab account. You can clone this repository to your computer for local development.
@@ -18,7 +19,7 @@ $ cd hexo-material-netlify
 $ npm install
 $ hexo server
 ```
-_Notice that the `--recursive` flag is NECESSARY here, as the `material` theme is [introduced as a submodule](https://stackoverflow.com/questions/3796927/how-to-git-clone-including-submodules). _
+_Notice that the `--recursive` flag is important here, as the `material` theme is [introduced as a submodule](https://stackoverflow.com/questions/3796927/how-to-git-clone-including-submodules)._
 
 Alternatively, you can update submodules manually:
 
@@ -79,4 +80,4 @@ And in my `_redirects` file, I specified the following rules to redirect the URL
 
 In this specific example, it means if your browser language is set to `zh-cn`, you'll be taken to https://yourwebsite.com/zh-cn/ automatically. You can apply this technique for any other languages. 
 
-_Notice that we can not apply redirect rules to posts since Hexo can only generate posts that are under `source/_posts`. If we create the posts manually into each language folder, Hexo won’t recognize the path. _
+_Notice that we can not apply redirect rules to posts since Hexo can only generate posts that are under `source/_posts`. If we create the posts manually into each language folder, Hexo won’t recognize the path._
