@@ -1,9 +1,5 @@
-/home      /
-/*  /zh-cn/:splat  302  Language=zh
-/zh-cn/:year/:month/:date/:title     /:year/:month/:date/:title
+/           /zh-cn          302  Language=zh
+/about      /zh-cn/about    302  Language=zh
 
-/es/:year/:month/:date/:title     /:year/:month/:date/:title
-
-/*  /es/:splat     302  Language=es
-
-/*  /en/:splat
+/           /es             302  Language=es
+/about      /es/about       302  Language=es
