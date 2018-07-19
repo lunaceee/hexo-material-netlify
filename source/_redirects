@@ -4,4 +4,4 @@
 /           /es             302  Language=es
 /about      /es/about       302  Language=es
 
-/:year/:month/:day/:title  /zh-cn/:year/:month/:day/:title 302 Language=zh 
+/archives/:year/:month   /zh-cn/:year/:month/:day/:title 302 Language=zh
