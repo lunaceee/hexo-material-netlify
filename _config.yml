@@ -8,7 +8,10 @@ subtitle:
 description:
 keywords:
 author: John Doe
-language: en
+language: 
+  - en
+  - zh-cn
+  - es
 
 timezone:
 
@@ -16,7 +19,7 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://yoursite.com
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :lang/:year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
@@ -54,6 +57,7 @@ index_generator:
   path: ''
   per_page: 10
   order_by: -date
+  single_language_index: true
   
 # Category & Tag
 default_category: uncategorized
