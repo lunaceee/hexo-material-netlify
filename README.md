@@ -30,42 +30,30 @@ git submodule update
 
 ## Netlify CMS editor workflow
 The Netlify CMS `admin` panel is already set up in the repo. You can access it via `yourwebsite.com/admin`, e.g. `localhost:4000/admin`.
-Please refer to [Netlify CMS docs](https://www.netlifycms.org/docs/intro/) for more info.
+To understand more about the configuration, check out [Netlify CMS docs](https://www.netlifycms.org/docs/intro/).
 
 ## Internationalization with Language-Based Redirects
 Netlify supports a wide range of [Redirect & Rewrite Rules](https://www.netlify.com/docs/redirects/). 
 Our example site is featuring the [Language-based redirecs](https://www.netlify.com/docs/redirects/#geoip-and-language-based-redirects), which comes in handy for any sites that support multiple languages.
-For example, my root `source` folder is set up like this:
+
+To enable language based redirects, make sure the following configurations in your root `_config.yml` file is included:
 
 ```
-source/
-├── _data
-│   └── head.json
-├── _posts
-│   ├── Platero
-│   │   └── platero.jpg
-│   ├── Platero.md
-│   ├── hello-world.md
-│   └── 你好.md
-├── _redirects
-├── admin
-│   ├── config.yml
-│   └── index.html
-├── en
-├── es
-├── images
-│   └── uploads
-│       └── netlify-logo.png
-└── zh-cn
+language: 
+  - [language_01]
+  - [language_02]
+  - [language_03]
 ```
 
-And in my `_redirects` file, I specified the following rules to redirect the URL based on the default browser language:
 ```
-/           /zh-cn          302  Language=zh
-
-/           /es             302  Language=es
-
-/           /en             302  Language=en
+i18n_dir: :lang
+```
+In the markdown file, make sure you specify the language of the post in the front matter:
+```
+lang: [language of preference]
 ```
 
-Which means if your browser language is set to `zh-cn`, you'll be taken to https://yourwebsite.com/zh-cn/ automatically. You can apply this technique for any other languages. 
+Now, if your browser language is set to `zh-cn`, you'll be taken to https://yourwebsite.com/zh-cn/ automatically. You can apply this technique for any other languages. 
+
+### Display a single language on the home page
+By default, our theme shows posts in all languages on the home page. For the purpose of language based redirects, ideally we only want to show posts written in the prefered language. I found a nice plug-in [hexo-generator-index-i18n](https://github.com/xcatliu/hexo-generator-index-i18n) to filter out the unrelated posts. So if you go to https://yourwebsite.com/zh-cn/, you'd only see the posts written in Chinese. Same applies to all other languages.
