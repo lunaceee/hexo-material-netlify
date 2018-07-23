@@ -53,7 +53,39 @@ In the markdown file, make sure you specify the language of the post in the fron
 lang: [language of preference]
 ```
 
+Example code of language based redirect rules:
+```
+/           /zh-cn          302  Language=zh
+/about      /zh-cn/about    302  Language=zh
+
+/           /es             302  Language=es
+```
+
 Now, if your browser language is set to `zh-cn`, you'll be taken to https://yourwebsite.com/zh-cn/ automatically. You can apply this technique for any other languages. 
+Make sure that the file path in the redirect rules match your folder structures. E.g., I created a `zh-cn` folder for all the pages in Chinese and added an `about` folder containing the about page:
+```
+source/
+├── _data
+│   └── head.json
+├── _posts
+│   ├── Platero
+│   │   └── platero.jpg
+│   ├── Platero.md
+│   ├── hello-world.md
+│   └── 你好.md
+├── _redirects
+├── admin
+│   ├── config.yml
+│   └── index.html
+├── images
+│   └── uploads
+│       └── netlify-logo.png
+└── zh-cn
+    ├── about
+    │   └── index.md
+    └── index.md
+```
+Thus, in my `_redirects` file, I specified `/zh-cn/about` as a redirect rule for the about page in Chinese.
 
 ### Display a single language on the home page
-By default, our theme shows posts in all languages on the home page. For the purpose of language based redirects, ideally we only want to show posts written in the prefered language. I found a nice plug-in [hexo-generator-index-i18n](https://github.com/xcatliu/hexo-generator-index-i18n) to filter out the unrelated posts. So if you go to https://yourwebsite.com/zh-cn/, you'd only see the posts written in Chinese. Same applies to all other languages.
+By default, our theme shows posts in all languages on the home page. Ideally we only want to show posts written in the default language of the browser. I found a nice plug-in [hexo-generator-index-i18n](https://github.com/xcatliu/hexo-generator-index-i18n) to filter out the unrelated posts. For example, if you go to https://yourwebsite.com/zh-cn/, you'd only see the posts written in Chinese. 

@@ -1,4 +1,6 @@
-/           /zh-cn          302  Language=zh
+/*          /china/:splat   302  Country=cn,hk,tw
+
+/*          /zh-cn/:splat   302  Language=zh
 
 /           /es             302  Language=es
 
