@@ -22,10 +22,11 @@ $ hexo server
 _Notice that the `--recursive` flag is important here, as the `material` theme is [introduced as a submodule](https://stackoverflow.com/questions/3796927/how-to-git-clone-including-submodules)._
 
 Alternatively, you can update submodules manually:
-
-    cd hexo-material-netlify
-    git submodule init
-    git submodule update
+```
+cd hexo-material-netlify
+git submodule init
+git submodule update
+```
 
 ## Netlify CMS editor workflow
 The Netlify CMS `admin` panel is already set up in the repo. You can access it via `yourwebsite.com/admin`, e.g. `localhost:4000/admin`.
@@ -37,47 +38,34 @@ Our example site is featuring the [Language-based redirecs](https://www.netlify.
 For example, my root `source` folder is set up like this:
 
 ```
-    source/
-    ├── _data
-    │   └── head.json
-    ├── _posts
-    │   ├── Platero
-    │   │   └── platero.jpg
-    │   ├── Platero.md
-    │   ├── hello-world.md
-    │   ├── 新文章
-    │   └── 新文章.md
-    ├── _redirects
-    ├── admin
-    │   ├── config.yml
-    │   └── index.html
-    ├── en
-    │   └── about
-    │       └── index.md
-    ├── es
-    │   └── about
-    │       └── index.md
-    ├── images
-    │   └── uploads
-    │       └── netlify-logo.png
-    ├── zh-cn
-    │   ├── about
-    │   │   └── index.md
-    │   └── index.md
-    └── zh-tw
-        └── about
-            └── index.md
+source/
+├── _data
+│   └── head.json
+├── _posts
+│   ├── Platero
+│   │   └── platero.jpg
+│   ├── Platero.md
+│   ├── hello-world.md
+│   └── 你好.md
+├── _redirects
+├── admin
+│   ├── config.yml
+│   └── index.html
+├── en
+├── es
+├── images
+│   └── uploads
+│       └── netlify-logo.png
+└── zh-cn
 ```
 
 And in my `_redirects` file, I specified the following rules to redirect the URL based on the default browser language:
 ```
-    /           /zh-cn          302  Language=zh
-    /about      /zh-cn/about    302  Language=zh
-    
-    /           /es             302  Language=es
-    /about      /es/about       302  Language=es
+/           /zh-cn          302  Language=zh
+
+/           /es             302  Language=es
+
+/           /en             302  Language=en
 ```
 
-In this specific example, it means if your browser language is set to `zh-cn`, you'll be taken to https://yourwebsite.com/zh-cn/ automatically. You can apply this technique for any other languages. 
-
-_Notice that we can not apply redirect rules to posts since Hexo can only generate posts that are under `source/_posts`. If we create the posts manually into each language folder, Hexo won’t recognize the path._
+Which means if your browser language is set to `zh-cn`, you'll be taken to https://yourwebsite.com/zh-cn/ automatically. You can apply this technique for any other languages. 
