@@ -2,6 +2,7 @@
 
 /*          /zh-cn/:splat   302  Language=zh
 
-/           /es             302  Language=es
+/*           /en/:splat     302  Language=en
 
-/           /en             302  Language=en
+/*           /es/:splat     302  Language=es
+
