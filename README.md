@@ -88,4 +88,4 @@ source/
 Thus, in my `_redirects` file, I specified `/zh-cn/about` as a redirect rule for the about page in Chinese.
 
 ### Display a single language on the home page
-By default, our theme shows posts in all languages on the home page. Ideally we only want to show posts written in the default language of the browser. I found a nice plug-in [hexo-generator-index-i18n](https://github.com/xcatliu/hexo-generator-index-i18n) to filter out the unrelated posts. For example, if you go to https://yourwebsite.com/zh-cn/, you'd only see the posts written in Chinese. 
+By default, our theme shows posts in all languages on the home page. Ideally only show posts written in the default language of the browser. I found a nice plug-in [hexo-generator-index-i18n](https://github.com/xcatliu/hexo-generator-index-i18n) to filter out the unrelated posts. For example, if you go to https://yourwebsite.com/zh-cn/, you'd only see the posts written in Chinese. 
